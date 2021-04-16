@@ -3,8 +3,8 @@ MDPH612 Final Project
 
 A program that renders a 3D model of body and RT beams from DICOM structure and DICOM plan files. The 3D model is saved as a gif and displayed in a web app for patients to view their 3D RT plan.
 
-###Requirements
-`Python 3`
+### Requirements
+`Python 3 & Postgres`
 
 Packages: 
 * numpy
@@ -14,8 +14,8 @@ Packages:
 * Flask
 * imageio
 
-##dicom_manipulation.py
-
+## dicom_manipulation.py
+This file is what manipulates all the DICOM images to create the 3D model and turn it into a gif.
 To use, first install missing packages in the code using pip install [missing package].
 The code assumes that RTstructure and RTplan are in the same folder. The path can be specified by the user. The files must end in .dcm.
 Several functions are defined inside of dicom_manipulation.py. They are defined in the code, and the requirements are as follows:
@@ -44,3 +44,14 @@ saveSC requires the path to the saved data from the get3DData function, and the 
 def makeVid():
 ```
 requires the path to the saved screenshot folder, and it requires the program to have a /static/images/ path. This is later used for the html code and the folders must be called the same way.
+
+## patient_db.py
+
+This file fills and generates the patient database.
+A configured postgres database connection is required to run this.
+
+## webapp.py
+
+This file controls the data for the web app.
+Requirement is Flask, a postgres database connection, and an index.html file that can construct the web app.
+
