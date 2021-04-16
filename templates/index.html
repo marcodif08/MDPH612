@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <style>
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    </style>
+  </head>
+<div class="center">
+  <h1>{{ROI}}</h1>
+<form action="/index" method="POST">
+  <label for="rois">Choose a patient:</label>
+  <select name="rois" id="rois">
+    <option value="Abdomen" SELECTED>Patient 1 Abdomen</option>
+    <option value="ENT">Patient 2 ENT</option>
+    <option value="Prostate">Patient 3 Prostate</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+<br>
+
+<body>
+  <img src="{{ user_image }}" alt="User Image">
+</body>
