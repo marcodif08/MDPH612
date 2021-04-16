@@ -53,5 +53,5 @@ A configured postgres database connection is required to run this.
 ## webapp.py
 
 This file controls the data for the web app.
-Requirement is Flask, a postgres database connection, and an index.html file that can construct the web app.
+Requirement is Flask, a postgres database connection, and an index.html file that can construct the web app. webapp.py assumes that the database is already filled with the necessary entries, and contains the path to the gif files in /static/images/
 
